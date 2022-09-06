@@ -612,12 +612,50 @@
         </button>
         <div class="modal-form-wrapper"></div>
         <form action="javascript:void(0);" class="modal-form">
-          <input type="text" id="username" name="username" />
-          <label for="username"></label>
-          <input type="tel" id="telephone" name="telephone" />
-          <label for="telephone"></label>
-          <input type="email" id="email" name="email" />
-          <label for="email"></label>
+          <p>Залиште свої дані, ми вам передзвонимо</p>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            autocomplete="off"
+            required
+          />
+          <label for="username">Ім'я</label>
+          <input
+            type="tel"
+            id="telephone"
+            name="telephone"
+            autocomplete="off"
+            required
+          />
+          <label for="telephone">Телефон</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="off"
+            required
+          />
+          <label for="email">Пошта</label>
+          <textarea
+            name="comment"
+            id="comment"
+            rows="7"
+            placeholder="Введіть текст"
+          ></textarea>
+          <label for="comment">Коментар</label>
+          <input
+            type="checkbox"
+            name="agreement"
+            id="agreement"
+            value="agreed"
+          />
+          <label for="agreement"
+            >Погоджуюся з розсилкою та приймаю
+            <a href="#" class="links-general links-selection"
+              >Умови договору</a
+            ></label
+          >
           <button class="btn-genera submit-btn">Відправити</button>
         </form>
       </div>
