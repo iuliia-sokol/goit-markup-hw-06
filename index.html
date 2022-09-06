@@ -583,7 +583,7 @@
         </div>
         <div class="footer-subscription-block">
           <p class="footer-claimer">Підпишіться на розсилку</p>
-          <form class="subscription-form">
+          <form action="javascript:void(0);" class="subscription-form">
             <label for="subsctiption">
               <input
                 type="email"
@@ -602,13 +602,24 @@
         </div>
       </div>
     </footer>
-    <div class="modal-overlay is-hidden" data-modal>
+    <!-- is-hidden -->
+    <div class="modal-overlay" data-modal>
       <div class="modal-window">
-        <button data-modal-close>
-          <svg class="modal-close-btn">
+        <button data-modal-close class="modal-close-btn">
+          <svg class="modal-close-btn-icon">
             <use href="./images/icons.svg#icon-modal-close-btn"></use>
           </svg>
         </button>
+        <div class="modal-form-wrapper"></div>
+        <form action="javascript:void(0);" class="modal-form">
+          <input type="text" id="username" name="username" />
+          <label for="username"></label>
+          <input type="tel" id="telephone" name="telephone" />
+          <label for="telephone"></label>
+          <input type="email" id="email" name="email" />
+          <label for="email"></label>
+          <button class="btn-genera submit-btn">Відправити</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
