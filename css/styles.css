@@ -44,6 +44,7 @@ ul {
   padding: 0 15px;
 }
 .section {
+  min-width: 1200px;
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -130,6 +131,7 @@ ul {
 
 /* Header */
 .header {
+  min-width: 1200px;
   background-color: var(--white);
   border-bottom: 1px solid var(--color-divider-line);
 }
@@ -218,16 +220,15 @@ ul {
 
 /* Footer */
 .footer {
+  min-width: 1200px;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--bg-footer);
 }
 .footer-container {
   display: flex;
+  justify-content: space-between;
   align-items: baseline;
-}
-.footer-contacts-block {
-  margin-right: 70px;
 }
 .footer-content-list {
   font-style: normal;
@@ -243,9 +244,6 @@ ul {
 }
 .footer-contacts-link {
   color: var(--txt-adress-link-transparent);
-}
-.footer-socialmedia-block {
-  margin-right: 93px;
 }
 .footer-claimer {
   margin-bottom: 20px;
@@ -337,6 +335,7 @@ ul {
 /* Hero */
 
 .hero-section {
+  min-width: 1200px;
   padding-top: 200px;
   padding-bottom: 200px;
   max-width: 1600px;
@@ -679,6 +678,7 @@ ul {
   text-indent: 30px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  outline: none;
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
@@ -712,19 +712,6 @@ ul {
   width: 15px;
   height: 12px;
 }
-.modal-form-input:hover {
-}
-.modal-form-input:hover ~ .modal-form-icon-wrapper > svg,
-.modal-form-input:focus ~ .modal-form-icon-wrapper > svg {
-  fill: var(--accent-blue);
-}
-.modal-form-input:hover,
-.modal-form-input:focus,
-.modal-form-textarea:hover,
-.modal-form-textarea:focus {
-  border-color: var(--accent-blue);
-}
-
 .modal-form-textarea {
   width: 100%;
   max-height: 120px;
@@ -735,6 +722,7 @@ ul {
   resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  outline: none;
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
@@ -746,6 +734,16 @@ ul {
   line-height: 1.167;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+}
+.modal-form-input:hover ~ .modal-form-icon-wrapper > svg,
+.modal-form-input:focus ~ .modal-form-icon-wrapper > svg {
+  fill: var(--accent-blue);
+}
+.modal-form-input:hover,
+.modal-form-input:focus,
+.modal-form-textarea:hover,
+.modal-form-textarea:focus {
+  border-color: var(--accent-blue);
 }
 .modal-checkbox-wrapper {
   margin-bottom: 30px;
