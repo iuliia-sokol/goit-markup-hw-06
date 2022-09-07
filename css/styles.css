@@ -724,13 +724,10 @@ ul {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-.modal-form-input:hover + .modal-form-icon,
 .modal-form-input:focus + .modal-form-icon {
   fill: var(--accent-blue);
 }
-.modal-form-input:hover,
 .modal-form-input:focus,
-.modal-form-textarea:hover,
 .modal-form-textarea:focus {
   border-color: var(--accent-blue);
 }
@@ -739,6 +736,8 @@ ul {
   align-self: center;
 }
 .modal-checkbox-label {
+  display: flex;
+  align-items: center;
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
@@ -746,7 +745,28 @@ ul {
 .modal-checkbox-label input {
   margin-right: 7px;
 }
+.checkbox-mark-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  fill: none;
+  background-image: url(../images/checkbox-empty.svg);
+  background-position: center;
+  background-size: contain;
+  background-origin: border-box;
+  border-radius: 2px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.checkbox-mark:checked + .checkbox-mark-icon {
+  background-image: none;
+  fill: var(--white);
+  background-color: var(--accent-blue);
+}
 .modal-checkbox-label a {
+  margin-left: 2px;
   text-decoration-line: underline;
   color: var(--accent-blue);
 }
