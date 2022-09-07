@@ -665,26 +665,51 @@ ul {
   letter-spacing: 0.03em;
   color: var(--txt-main);
 }
-.modal-form-label {
-  margin-bottom: 4px;
+.modal-form-input-wrapper {
+  width: 100%;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  position: relative;
+  display: flex;
 }
 .modal-form-input {
   width: 100%;
-  max-height: 40px;
-  padding: 12px;
-  margin-bottom: 10px;
+  height: 40px;
+  padding: 12px 12px 12px 42px;
+
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-form-icon {
+.modal-form-icon-wrapper {
   width: 18px;
   height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+}
+.modal-form-icon {
   fill: var(--txt-main);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-form-input:hover + .modal-form-icon,
-.modal-form-input:focus + .modal-form-icon {
+.modal-form-icon.user {
+  width: 12px;
+  height: 12px;
+}
+.modal-form-icon.phone {
+  width: 13px;
+  height: 13px;
+}
+.modal-form-icon.email {
+  width: 15px;
+  height: 12px;
+}
+.modal-form-input:hover ~ .modal-form-icon-wrapper > svg,
+.modal-form-input:focus ~ .modal-form-icon-wrapper > svg {
   fill: var(--accent-blue);
 }
 .modal-form-input:hover,
@@ -696,6 +721,7 @@ ul {
   width: 100%;
   max-height: 120px;
   padding: 12px 16px;
+  margin-top: 4px;
   margin-bottom: 20px;
   overflow: scroll;
   resize: none;
