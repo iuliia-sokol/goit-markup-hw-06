@@ -613,6 +613,7 @@
         <div class="modal-form-wrapper"></div>
         <form action="javascript:void(0);" class="modal-form">
           <p>Залиште свої дані, ми вам передзвонимо</p>
+          <label for="username">Ім'я</label>
           <input
             type="text"
             id="username"
@@ -620,7 +621,7 @@
             autocomplete="off"
             required
           />
-          <label for="username">Ім'я</label>
+          <label for="telephone">Телефон</label>
           <input
             type="tel"
             id="telephone"
@@ -628,7 +629,7 @@
             autocomplete="off"
             required
           />
-          <label for="telephone">Телефон</label>
+          <label for="email">Пошта</label>
           <input
             type="email"
             id="email"
@@ -636,26 +637,27 @@
             autocomplete="off"
             required
           />
-          <label for="email">Пошта</label>
+          <label for="comment">Коментар</label>
           <textarea
             name="comment"
             id="comment"
             rows="7"
             placeholder="Введіть текст"
           ></textarea>
-          <label for="comment">Коментар</label>
-          <input
-            type="checkbox"
-            name="agreement"
-            id="agreement"
-            value="agreed"
-          />
-          <label for="agreement"
-            >Погоджуюся з розсилкою та приймаю
-            <a href="#" class="links-general links-selection"
-              >Умови договору</a
-            ></label
-          >
+          <div class="modal-checkbox-wrapper">
+            <label for="agreement" class="modal-checkbox-label">
+              <input
+                type="checkbox"
+                name="agreement"
+                id="agreement"
+                value="agreed"
+              />
+              Погоджуюся з розсилкою та приймаю
+              <a href="#" class="links-general links-selection"
+                >Умови договору</a
+              ></label
+            >
+          </div>
           <button class="btn-genera submit-btn">Відправити</button>
         </form>
       </div>

@@ -600,6 +600,14 @@ ul {
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal-overlay.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal-overlay.is-hidden .modal-window {
+  transform: translate(-50%, -50%) scale(2);
+}
 .modal-window {
   width: 528px;
   min-height: 581px;
@@ -636,9 +644,14 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--txt-paragraph-grey);
 }
 .modal-form > p {
+  align-self: center;
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
@@ -647,26 +660,51 @@ ul {
   letter-spacing: 0.03em;
   color: var(--txt-main);
 }
+.modal-form > label {
+  margin-bottom: 4px;
+}
 .modal-form > input {
   width: 100%;
   max-height: 40px;
+  padding: 12px;
   margin-bottom: 10px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
 .modal-form > textarea {
+  width: 100%;
+  max-height: 120px;
+  padding: 12px 16px;
   margin-bottom: 20px;
+  overflow: scroll;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
 }
-
-.modal-overlay.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+.modal-form > textarea[placeholder] {
+  /* color: rgba(117, 117, 117, 0.5); */
+  color: #2196f3;
 }
-.modal-overlay.is-hidden .modal-window {
-  transform: translate(-50%, -50%) scale(2);
+.modal-checkbox-wrapper {
+  margin-bottom: 30px;
+  align-self: center;
 }
-
+.modal-checkbox-label {
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+}
+.modal-checkbox-label input {
+  margin-right: 7px;
+}
+.modal-checkbox-label a {
+  text-decoration-line: underline;
+  color: var(--accent-blue);
+}
+.modal-form > button {
+  align-self: center;
+  margin: 0;
+}
 /* PORTFOLIO PAGE */
 
 /* Portfolio filter buttons */
