@@ -639,6 +639,11 @@ ul {
 .modal-close-btn-icon {
   width: 18px;
   height: 18px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close-btn:hover .modal-close-btn-icon,
+.modal-close-btn:focus .modal-close-btn-icon {
+  fill: var(--accent-blue);
 }
 .modal-form {
   display: flex;
@@ -660,17 +665,33 @@ ul {
   letter-spacing: 0.03em;
   color: var(--txt-main);
 }
-.modal-form > label {
+.modal-form-label {
   margin-bottom: 4px;
 }
-.modal-form > input {
+.modal-form-input {
   width: 100%;
   max-height: 40px;
   padding: 12px;
   margin-bottom: 10px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal-form-icon {
+  width: 18px;
+  height: 18px;
+  fill: var(--txt-main);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-input:hover + .modal-form-icon,
+.modal-form-input:focus + .modal-form-icon {
+  fill: var(--accent-blue);
+}
+.modal-form-input:hover,
+.modal-form-input:focus {
+  border-color: var(--accent-blue);
+}
+
 .modal-form > textarea {
   width: 100%;
   max-height: 120px;

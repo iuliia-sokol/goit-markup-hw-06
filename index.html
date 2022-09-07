@@ -613,31 +613,43 @@
         <div class="modal-form-wrapper"></div>
         <form action="javascript:void(0);" class="modal-form">
           <p>Залиште свої дані, ми вам передзвонимо</p>
-          <label for="username">Ім'я</label>
+          <label for="username" class="modal-form-label">Ім'я</label>
           <input
             type="text"
             id="username"
             name="username"
+            class="modal-form-input"
             autocomplete="off"
             required
           />
-          <label for="telephone">Телефон</label>
+          <svg class="modal-form-icon">
+            <use href="./images/icons.svg#icon-modal-user"></use>
+          </svg>
+          <label for="telephone" class="modal-form-label">Телефон</label>
           <input
             type="tel"
             id="telephone"
             name="telephone"
+            class="modal-form-input"
             autocomplete="off"
             required
           />
-          <label for="email">Пошта</label>
+          <svg class="modal-form-icon">
+            <use href="./images/icons.svg#icon-modal-phone"></use>
+          </svg>
+          <label for="email" class="modal-form-label">Пошта</label>
           <input
             type="email"
             id="email"
             name="email"
+            class="modal-form-input"
             autocomplete="off"
             required
           />
-          <label for="comment">Коментар</label>
+          <svg class="modal-form-icon">
+            <use href="./images/icons.svg#icon-modal-mail"></use>
+          </svg>
+          <label for="comment" class="modal-form-label">Коментар</label>
           <textarea
             name="comment"
             id="comment"
